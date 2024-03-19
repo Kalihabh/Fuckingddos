@@ -47,13 +47,13 @@
       console.log(`[\x1b[35mBangladesh dark net\x1b[0m] ${getCurrentTime()} Title: ${getTitleFromHTML(data)} (\x1b[32m${status}\x1b[0m)`);
     })
     .catch((error) => {
-      if (error.message === 'Request timed out') {
+      if (error.message === 'kam ses') {
         console.log(`[\x1b[35mBangladesh dark net \x1b[0m] ${getCurrentTime()} Request Timed Out`);
       } else if (error.response) {
         const extractedTitle = getTitleFromHTML(error.response.data);
-        console.log(`[\x1b[35mANONY-BGF\x1b[0m] ${getCurrentTime()} Title: ${extractedTitle} (\x1b[31m${error.response.status}\x1b[0m)`);
+        console.log(`[\x1b[35mBangladesh dark net\x1b[0m] ${getCurrentTime()} Title: ${extractedTitle} (\x1b[31m${error.response.status}\x1b[0m)`);
       } else {
-        console.log(`[\x1b[35mANONY-BGF\x1b[0m] ${getCurrentTime()} ${error.message}`);
+        console.log(`[\x1b[35mBangladesh dark net BA\x1b[0m] ${getCurrentTime()} ${error.message}`);
       }
     });
 }
