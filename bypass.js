@@ -48,12 +48,12 @@
     })
     .catch((error) => {
       if (error.message === 'kam ses') {
-        console.log(`[\x1b[35mBangladesh dark net \x1b[0m] ${getCurrentTime()} Request Timed Out`);
+        console.log(`[\x1b[35mBangladesh dark net\x1b[0m] ${getCurrentTime()} Request Timed Out`);
       } else if (error.response) {
         const extractedTitle = getTitleFromHTML(error.response.data);
         console.log(`[\x1b[35mBangladesh dark net\x1b[0m] ${getCurrentTime()} Title: ${extractedTitle} (\x1b[31m${error.response.status}\x1b[0m)`);
       } else {
-        console.log(`[\x1b[35mBangladesh dark net BA\x1b[0m] ${getCurrentTime()} ${error.message}`);
+        console.log(`[\x1b[35mBangladesh dark net\x1b[0m] ${getCurrentTime()} ${error.message}`);
       }
     });
 }
